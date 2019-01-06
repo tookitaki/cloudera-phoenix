@@ -44,6 +44,10 @@
       <id>apache release</id>
       <url>https://repository.apache.org/content/repositories/releases/</url>
     </repository>
+    <repository>
+      <id>cloudera</id>
+      <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+    </repository>
   </repositories>
 
   <parent>
@@ -66,8 +70,8 @@
     <top.dir>${project.basedir}</top.dir>
 
     <!-- Hadoop Versions -->
-    <hbase.version>2.0.1</hbase.version>
-    <hadoop.version>3.0.0</hadoop.version>
+    <hbase.version>2.0.0-cdh6.0.1</hbase.version>
+    <hadoop.version>3.0.0-cdh6.0.1</hadoop.version>
 
     <!-- Dependency versions -->
     <commons-cli.version>1.4</commons-cli.version>
@@ -511,6 +515,11 @@
   <dependencyManagement>
     <dependencies>
       <!-- Intra-project dependencies -->
+      <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-common</artifactId>
+        <version>${hadoop.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.apache.phoenix</groupId>
         <artifactId>phoenix-core</artifactId>
