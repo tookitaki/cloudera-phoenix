@@ -119,7 +119,8 @@
     <!-- Hadoop Versions -->
     <hbase.version>2.0.0-cdh6.0.1</hbase.version>
     <hadoop.version>3.0.0-cdh6.0.1</hadoop.version>
-    <cdh.version>cdh6.0.1</cdh.version>
+    <cdh.version.number>${cdh.parent.version}</cdh.version.number>
+    <cdh.version>cdh${cdh.version.number}</cdh.version>
     <cdh.version.number>6.0.1</cdh.version.number>
     <phoenix.release.version>v5.0.0-HBase-2.0</phoenix.release.version>
 
