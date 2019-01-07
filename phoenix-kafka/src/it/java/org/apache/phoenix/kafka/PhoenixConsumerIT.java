@@ -29,6 +29,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
 
+import kafka.admin.RackAwareMode;
 import org.I0Itec.zkclient.ZkClient;
 import org.apache.flume.Context;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -50,7 +51,8 @@ import kafka.server.KafkaConfig;
 import kafka.server.KafkaServer;
 import kafka.utils.MockTime;
 import kafka.utils.TestUtils;
-import kafka.utils.Time;
+//import kafka.utils.Time;
+import org.apache.kafka.common.utils.Time;
 import kafka.utils.ZKStringSerializer$;
 import kafka.utils.ZkUtils;
 import kafka.zk.EmbeddedZookeeper;
@@ -85,9 +87,8 @@ public class PhoenixConsumerIT extends BaseHBaseManagedTimeIT {
         Time mock = new MockTime();
         kafkaServer = TestUtils.createServer(config, mock);
         kafkaServer.startup();
-
         // create topic
-        AdminUtils.createTopic(zkUtils, TOPIC, 1, 1, new Properties());
+        AdminUtils.createTopic(zkUtils, TOPIC, 1, 1, new Properties(),RackAwareMode.Disabled$.MODULE$);
 
         pConsumer = new PhoenixConsumer();
         

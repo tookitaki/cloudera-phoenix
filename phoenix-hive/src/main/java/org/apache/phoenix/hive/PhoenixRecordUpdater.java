@@ -333,7 +333,7 @@ public class PhoenixRecordUpdater implements RecordUpdater {
         return stats;
     }
 
-    @Override
+//    @Override
     public long getBufferedRowCount() {
         return numRecords;
     }

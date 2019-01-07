@@ -123,7 +123,7 @@ public class ServerCustomizersIT extends BaseHBaseManagedTimeIT {
         public void customize(Server server) {
             LOG.debug("Customizing server to allow requests for {}", USER_AUTHORIZED);
             HashLoginService login = new HashLoginService();
-            login.putUser(USER_AUTHORIZED, Credential.getCredential(USER_PW), new String[] {"users"});
+//            login.putUser(USER_AUTHORIZED, Credential.getCredential(USER_PW), new String[] {"users"});
             login.setName("users");
 
             Constraint constraint = new Constraint();
