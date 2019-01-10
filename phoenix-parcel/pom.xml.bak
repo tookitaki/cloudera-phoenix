@@ -105,17 +105,6 @@
             </configuration>
           </execution>
           <execution>
-            <id>copy-file-el5</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <sourceFile>${project.build.directory}/${parcel.folder}.parcel.tar</sourceFile>
-              <destinationFile>${project.build.directory}/${parcel.folder}-el5.parcel</destinationFile>
-            </configuration>
-          </execution>
-          <execution>
             <id>copy-file-el7</id>
             <phase>package</phase>
             <goals>
@@ -124,83 +113,6 @@
             <configuration>
               <sourceFile>${project.build.directory}/${parcel.folder}.parcel.tar</sourceFile>
               <destinationFile>${project.build.directory}/${parcel.folder}-el7.parcel</destinationFile>
-            </configuration>
-          </execution>
-          <execution>
-            <id>copy-file-sles11</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <sourceFile>${project.build.directory}/${parcel.folder}.parcel.tar</sourceFile>
-              <destinationFile>${project.build.directory}/${parcel.folder}-sles11.parcel</destinationFile>
-            </configuration>
-          </execution>
-          <execution>
-            <id>copy-file-sles12</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <sourceFile>${project.build.directory}/${parcel.folder}.parcel.tar</sourceFile>
-              <destinationFile>${project.build.directory}/${parcel.folder}-sles12.parcel</destinationFile>
-            </configuration>
-          </execution>
-          <execution>
-            <id>copy-file-precise</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <sourceFile>${project.build.directory}/${parcel.folder}.parcel.tar</sourceFile>
-              <destinationFile>${project.build.directory}/${parcel.folder}-precise.parcel</destinationFile>
-            </configuration>
-          </execution>
-          <execution>
-            <id>copy-file-jessie</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <sourceFile>${project.build.directory}/${parcel.folder}.parcel.tar</sourceFile>
-              <destinationFile>${project.build.directory}/${parcel.folder}-jessie.parcel</destinationFile>
-            </configuration>
-          </execution>
-          <execution>
-            <id>copy-file-trusty</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <sourceFile>${project.build.directory}/${parcel.folder}.parcel.tar</sourceFile>
-              <destinationFile>${project.build.directory}/${parcel.folder}-trusty.parcel</destinationFile>
-            </configuration>
-          </execution>
-          <execution>
-            <id>copy-file-wheezy</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <sourceFile>${project.build.directory}/${parcel.folder}.parcel.tar</sourceFile>
-              <destinationFile>${project.build.directory}/${parcel.folder}-wheezy.parcel</destinationFile>
-            </configuration>
-          </execution>
-          <execution>
-            <id>copy-file-xenial</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <sourceFile>${project.build.directory}/${parcel.folder}.parcel.tar</sourceFile>
-              <destinationFile>${project.build.directory}/${parcel.folder}-xenial.parcel</destinationFile>
             </configuration>
           </execution>
         </executions>

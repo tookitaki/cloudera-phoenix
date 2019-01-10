@@ -131,6 +131,35 @@
           </excludes>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>com.coderplus.maven.plugins</groupId>
+        <artifactId>copy-rename-maven-plugin</artifactId>
+        <version>1.0.1</version>
+        <executions>
+          <execution>
+            <id>copy-file-el6</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <sourceFile>${project.build.directory}/${parcel.folder}.parcel.tar</sourceFile>
+              <destinationFile>${project.build.directory}/${parcel.folder}-el6.parcel</destinationFile>
+            </configuration>
+          </execution>
+          <execution>
+            <id>copy-file-el7</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <sourceFile>${project.build.directory}/${parcel.folder}.parcel.tar</sourceFile>
+              <destinationFile>${project.build.directory}/${parcel.folder}-el7.parcel</destinationFile>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
