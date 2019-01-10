@@ -57,50 +57,14 @@
         <enabled>false</enabled>
       </snapshots>
     </repository>
-    <!--<repository>-->
-      <!--<id>cdh.snapshots.repo</id>-->
-      <!--<url>https://repository.cloudera.com/content/repositories/snapshots</url>-->
-      <!--<name>CDH Snapshots Repository</name>-->
-      <!--<snapshots>-->
-        <!--<enabled>true</enabled>-->
-      <!--</snapshots>-->
-      <!--<releases>-->
-        <!--<enabled>false</enabled>-->
-      <!--</releases>-->
-    <!--</repository>-->
-    <!--<repository>-->
-      <!--<id>datanucleus</id>-->
-      <!--<url>http://www.datanucleus.org/downloads/maven2</url>-->
-      <!--<name>Datanucleus</name>-->
-      <!--<snapshots>-->
-        <!--<enabled>false</enabled>-->
-      <!--</snapshots>-->
-    <!--</repository>-->
-    <!--<repository>-->
-      <!--<id>java.net repository</id>-->
-      <!--<url>http://download.java.net/maven/2</url>-->
-      <!--<snapshots>-->
-        <!--<enabled>false</enabled>-->
-      <!--</snapshots>-->
-    <!--</repository>-->
-    <!--<repository>-->
-      <!--<id>cdh.thirdparty.repo</id>-->
-      <!--<url>https://repository.cloudera.com/content/repositories/third-party</url>-->
-      <!--<name>Cloudera Third Party Repository</name>-->
-      <!--<snapshots><enabled>false</enabled></snapshots>-->
-    <!--</repository>-->
 
   </repositories>
 
-  <!--<parent>-->
-    <!--<groupId>org.apache</groupId>-->
-    <!--<artifactId>apache</artifactId>-->
-    <!--<version>14</version>-->
-  <!--</parent>-->
+
   <parent>
     <groupId>com.cloudera.cdh</groupId>
     <artifactId>cdh-root</artifactId>
-    <version>6.0.1</version>
+    <version>6.1.0</version>
   </parent>
 
   <scm>
@@ -117,12 +81,13 @@
     <top.dir>${project.basedir}</top.dir>
 
     <!-- Hadoop Versions -->
-    <hbase.version>2.0.0-cdh6.0.1</hbase.version>
-    <hadoop.version>3.0.0-cdh6.0.1</hadoop.version>
-    <cdh.version.number>${cdh.parent.version}</cdh.version.number>
+    <cdh.version.number>6.1.0</cdh.version.number>
     <cdh.version>cdh${cdh.version.number}</cdh.version>
-    <cdh.version.number>6.0.1</cdh.version.number>
-    <phoenix.release.version>v5.0.0-HBase-2.0</phoenix.release.version>
+    <hbase.version>${cdh.hbase.version}</hbase.version>
+    <hadoop.version>${cdh.hadoop.version}</hadoop.version>
+
+
+    <phoenix.release.version>v5.1.0-HBase-2.0</phoenix.release.version>
 
     <!-- Dependency versions -->
     <commons-cli.version>${cdh.commons-cli.version}</commons-cli.version>
