@@ -57,38 +57,6 @@
         <enabled>false</enabled>
       </snapshots>
     </repository>
-    <!--<repository>-->
-      <!--<id>cdh.snapshots.repo</id>-->
-      <!--<url>https://repository.cloudera.com/content/repositories/snapshots</url>-->
-      <!--<name>CDH Snapshots Repository</name>-->
-      <!--<snapshots>-->
-        <!--<enabled>true</enabled>-->
-      <!--</snapshots>-->
-      <!--<releases>-->
-        <!--<enabled>false</enabled>-->
-      <!--</releases>-->
-    <!--</repository>-->
-    <!--<repository>-->
-      <!--<id>datanucleus</id>-->
-      <!--<url>http://www.datanucleus.org/downloads/maven2</url>-->
-      <!--<name>Datanucleus</name>-->
-      <!--<snapshots>-->
-        <!--<enabled>false</enabled>-->
-      <!--</snapshots>-->
-    <!--</repository>-->
-    <!--<repository>-->
-      <!--<id>java.net repository</id>-->
-      <!--<url>http://download.java.net/maven/2</url>-->
-      <!--<snapshots>-->
-        <!--<enabled>false</enabled>-->
-      <!--</snapshots>-->
-    <!--</repository>-->
-    <!--<repository>-->
-      <!--<id>cdh.thirdparty.repo</id>-->
-      <!--<url>https://repository.cloudera.com/content/repositories/third-party</url>-->
-      <!--<name>Cloudera Third Party Repository</name>-->
-      <!--<snapshots><enabled>false</enabled></snapshots>-->
-    <!--</repository>-->
 
   </repositories>
 
