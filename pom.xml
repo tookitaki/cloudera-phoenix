@@ -117,10 +117,9 @@
     <top.dir>${project.basedir}</top.dir>
 
     <!-- Hadoop Versions -->
-    <cdh.version.number>6.0.1</cdh.version.number>
-    <hbase.version>2.0.0-cdh${cdh.version.number}</hbase.version>
-    <hadoop.version>3.0.0-cdh${cdh.version.number}</hadoop.version>
     <cdh.version.number>${cdh.parent.version}</cdh.version.number>
+    <hbase.version>${cdh.hbase.version}</hbase.version>
+    <hadoop.version>${cdh.hadoop.version}</hadoop.version>
     <cdh.version>cdh${cdh.version.number}</cdh.version>
 
     <phoenix.release.version>v5.0.0-HBase-2.0</phoenix.release.version>
