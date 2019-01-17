@@ -85,7 +85,7 @@
     <top.dir>${project.basedir}</top.dir>
 
     <!-- Hadoop Versions -->
-    <cdh.version.number>${cdh.parent.version}</cdh.version.number>
+    <cdh.version.number>6.0.1</cdh.version.number>
     <hbase.version>${cdh.hbase.version}</hbase.version>
     <hadoop.version>${cdh.hadoop.version}</hadoop.version>
     <cdh.version>cdh${cdh.version.number}</cdh.version>
