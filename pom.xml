@@ -60,11 +60,7 @@
 
   </repositories>
 
-  <!--<parent>-->
-  <!--<groupId>org.apache</groupId>-->
-  <!--<artifactId>apache</artifactId>-->
-  <!--<version>14</version>-->
-  <!--</parent>-->
+
   <parent>
     <groupId>com.cloudera.cdh</groupId>
     <artifactId>cdh-root</artifactId>
@@ -85,12 +81,13 @@
     <top.dir>${project.basedir}</top.dir>
 
     <!-- Hadoop Versions -->
-    <cdh.version.number>${cdh.parent.version}</cdh.version.number>
+    <cdh.version.number>6.1.0</cdh.version.number>
+    <cdh.version>cdh${cdh.version.number}</cdh.version>
     <hbase.version>${cdh.hbase.version}</hbase.version>
     <hadoop.version>${cdh.hadoop.version}</hadoop.version>
-    <cdh.version>cdh${cdh.version.number}</cdh.version>
 
-    <phoenix.release.version>v5.0.0-HBase-2.0</phoenix.release.version>
+
+    <phoenix.release.version>v5.1.0-HBase-2.0</phoenix.release.version>
 
     <!-- Dependency versions -->
     <commons-cli.version>${cdh.commons-cli.version}</commons-cli.version>
@@ -156,7 +153,7 @@
     <!-- Set default encoding so multi-byte tests work correctly on the Mac -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <curator.version>4.1.0</curator.version>
+   <curator.version>4.1.0</curator.version>
 
 
   </properties>
@@ -300,7 +297,7 @@
 	                 at org.apache.phoenix.coprocessor.MetaDataEndpointImpl.doGetTable(MetaDataEndpointImpl.java:2898)
 	                 at org.apache.phoenix.coprocessor.MetaDataEndpointImpl.doGetTable(MetaDataEndpointImpl.java:2835)
 	                 at org.apache.phoenix.coprocessor.MetaDataEndpointImpl.getTable(MetaDataEndpointImpl.java:490) -->
-                <!--enableAssertions>false</enableAssertions-->
+		<!--enableAssertions>false</enableAssertions-->
                 <argLine>-Xmx3000m -XX:MaxPermSize=256m -Djava.security.egd=file:/dev/./urandom "-Djava.library.path=${hadoop.library.path}${path.separator}${java.library.path}" -XX:NewRatio=4 -XX:SurvivorRatio=8 -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:+DisableExplicitGC -XX:+UseCMSInitiatingOccupancyOnly -XX:+CMSClassUnloadingEnabled -XX:+CMSScavengeBeforeRemark -XX:CMSInitiatingOccupancyFraction=68 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./target/ -Dorg.apache.hadoop.hbase.shaded.io.netty.packagePrefix=org.apache.hadoop.hbase.shaded.</argLine>
                 <redirectTestOutputToFile>${test.output.tofile}</redirectTestOutputToFile>
                 <shutdown>kill</shutdown>
@@ -330,40 +327,40 @@
                 <goal>verify</goal>
               </goals>
             </execution>
-            <execution>
+	    <execution>
               <id>NeedTheirOwnClusterTests</id>
               <configuration>
-                <encoding>UTF-8</encoding>
-                <forkCount>${numForkedIT}</forkCount>
-                <runOrder>alphabetical</runOrder>
-                <reuseForks>false</reuseForks>
-                <argLine>-enableassertions -Xmx2000m -XX:MaxPermSize=256m -Djava.security.egd=file:/dev/./urandom "-Djava.library.path=${hadoop.library.path}${path.separator}${java.library.path}" -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./target/ -Dorg.apache.hadoop.hbase.shaded.io.netty.packagePrefix=org.apache.hadoop.hbase.shaded.</argLine>
-                <redirectTestOutputToFile>${test.output.tofile}</redirectTestOutputToFile>
-                <testSourceDirectory>${basedir}/src/it/java</testSourceDirectory>
-                <groups>org.apache.phoenix.end2end.NeedsOwnMiniClusterTest</groups>
-                <shutdown>kill</shutdown>
+                 <encoding>UTF-8</encoding>
+                 <forkCount>${numForkedIT}</forkCount>
+                 <runOrder>alphabetical</runOrder>
+                 <reuseForks>false</reuseForks>
+                 <argLine>-enableassertions -Xmx2000m -XX:MaxPermSize=256m -Djava.security.egd=file:/dev/./urandom "-Djava.library.path=${hadoop.library.path}${path.separator}${java.library.path}" -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./target/ -Dorg.apache.hadoop.hbase.shaded.io.netty.packagePrefix=org.apache.hadoop.hbase.shaded.</argLine>
+                 <redirectTestOutputToFile>${test.output.tofile}</redirectTestOutputToFile>
+                 <testSourceDirectory>${basedir}/src/it/java</testSourceDirectory>
+                 <groups>org.apache.phoenix.end2end.NeedsOwnMiniClusterTest</groups>
+                 <shutdown>kill</shutdown>
               </configuration>
               <goals>
-                <goal>integration-test</goal>
-                <goal>verify</goal>
+                 <goal>integration-test</goal>
+                 <goal>verify</goal>
               </goals>
             </execution>
-            <execution>
+<execution>
               <id>SplitSystemCatalogTests</id>
               <configuration>
-                <encoding>UTF-8</encoding>
-                <forkCount>${numForkedIT}</forkCount>
-                <runOrder>alphabetical</runOrder>
-                <reuseForks>false</reuseForks>
-                <argLine>-enableassertions -Xmx2000m -XX:MaxPermSize=256m -Djava.security.egd=file:/dev/./urandom "-Djava.library.path=${hadoop.library.path}${path.separator}${java.library.path}" -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./target/</argLine>
-                <redirectTestOutputToFile>${test.output.tofile}</redirectTestOutputToFile>
-                <testSourceDirectory>${basedir}/src/it/java</testSourceDirectory>
-                <groups>org.apache.phoenix.end2end.SplitSystemCatalogTests</groups>
-                <shutdown>kill</shutdown>
+                 <encoding>UTF-8</encoding>
+                 <forkCount>${numForkedIT}</forkCount>
+                 <runOrder>alphabetical</runOrder>
+                 <reuseForks>false</reuseForks>
+                 <argLine>-enableassertions -Xmx2000m -XX:MaxPermSize=256m -Djava.security.egd=file:/dev/./urandom "-Djava.library.path=${hadoop.library.path}${path.separator}${java.library.path}" -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./target/</argLine>
+                 <redirectTestOutputToFile>${test.output.tofile}</redirectTestOutputToFile>
+                 <testSourceDirectory>${basedir}/src/it/java</testSourceDirectory>
+                 <groups>org.apache.phoenix.end2end.SplitSystemCatalogTests</groups>
+                 <shutdown>kill</shutdown>
               </configuration>
               <goals>
-                <goal>integration-test</goal>
-                <goal>verify</goal>
+                 <goal>integration-test</goal>
+                 <goal>verify</goal>
               </goals>
             </execution>
           </executions>
@@ -1040,7 +1037,7 @@
         <version>${bouncycastle.version}</version>
         <scope>test</scope>
       </dependency>
-      <dependency>
+       <dependency>
         <groupId>com.lmax</groupId>
         <artifactId>disruptor</artifactId>
         <version>${disruptor.version}</version>
@@ -1094,17 +1091,17 @@
   </profiles>
 
   <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>3.0.0</version>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
-        <version>3.0.5</version>
-      </plugin>
-    </plugins>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-project-info-reports-plugin</artifactId>
+              <version>3.0.0</version>
+          </plugin>
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>findbugs-maven-plugin</artifactId>
+              <version>3.0.5</version>
+          </plugin>
+      </plugins>
   </reporting>
 </project>
