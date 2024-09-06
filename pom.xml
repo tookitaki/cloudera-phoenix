@@ -95,7 +95,7 @@
     <htrace.version>3.1.0-incubating</htrace.version>
     <collections.version>3.2.2</collections.version>
     <!-- Do not change jodatime.version until HBASE-15199 is fixed -->
-    <jodatime.version>1.6</jodatime.version>
+    <jodatime.version>1.6.2</jodatime.version>
     <joni.version>2.1.2</joni.version>
     <avatica.version>1.12.0</avatica.version>
     <jetty.version>9.3.19.v20170502</jetty.version>
@@ -165,7 +165,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore />
+                    <ignore/>
                   </action>
                 </pluginExecution>
               </pluginExecutions>
