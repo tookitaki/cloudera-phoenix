@@ -67,7 +67,7 @@
 
     <!-- Hadoop Versions -->
     <hbase.version>2.0.1</hbase.version>
-    <hadoop.version>3.0.0</hadoop.version>
+    <hadoop.version>3.4.0</hadoop.version>
 
     <!-- Dependency versions -->
     <commons-cli.version>1.4</commons-cli.version>
@@ -165,7 +165,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore />
+                    <ignore/>
                   </action>
                 </pluginExecution>
               </pluginExecutions>
