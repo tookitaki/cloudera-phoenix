@@ -67,11 +67,11 @@
 
     <!-- Hadoop Versions -->
     <hbase.version>2.0.1</hbase.version>
-    <hadoop.version>3.0.0</hadoop.version>
+    <hadoop.version>3.4.0</hadoop.version>
 
     <!-- Dependency versions -->
     <commons-cli.version>1.4</commons-cli.version>
-    <hive.version>3.0.0</hive.version>
+    <hive.version>4.0.0</hive.version>
     <pig.version>0.13.0</pig.version>
     <jackson.version>1.9.2</jackson.version>
     <antlr.version>3.5.2</antlr.version>
@@ -165,7 +165,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore />
+                    <ignore/>
                   </action>
                 </pluginExecution>
               </pluginExecutions>
