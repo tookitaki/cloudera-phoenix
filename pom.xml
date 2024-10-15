@@ -66,7 +66,7 @@
     <top.dir>${project.basedir}</top.dir>
 
     <!-- Hadoop Versions -->
-    <hbase.version>2.0.1</hbase.version>
+    <hbase.version>2.4.0</hbase.version>
     <hadoop.version>3.0.0</hadoop.version>
 
     <!-- Dependency versions -->
@@ -98,7 +98,7 @@
     <jodatime.version>1.6</jodatime.version>
     <joni.version>2.1.2</joni.version>
     <avatica.version>1.12.0</avatica.version>
-    <jetty.version>9.3.19.v20170502</jetty.version>
+    <jetty.version>9.4.56.v20240826</jetty.version>
     <tephra.version>0.15.0-incubating</tephra.version>
     <omid.version>1.0.0</omid.version>
     <spark.version>2.3.0</spark.version>
@@ -165,7 +165,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore />
+                    <ignore/>
                   </action>
                 </pluginExecution>
               </pluginExecutions>
